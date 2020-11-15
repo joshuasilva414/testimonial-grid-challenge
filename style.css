@@ -1,0 +1,71 @@
+/**********variables**********/
+:root{
+  --white: hsl(0, 0%, 100%);
+}
+
+/**********tag selectors**********/
+
+body{
+  height: 100vh;
+}
+
+/**********class selectors**********/
+
+.full-page{
+  align-items: center;
+  background-color: hsl(210, 46%, 95%);
+  display: flex;
+  font-family: "Barlow Semi Condensed";
+  font-weight: 500, 600;
+  font-size: 13px;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.grid-item{
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.grid{
+  display: grid;
+  height: 70%;
+  width: 80%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+  "box1 box1 box2 box3"
+  "box4 box5 box5 box3";
+  grid-gap: 2em;
+}
+
+/**********id selectors**********/
+
+#box-one{
+  background-color: hsl(263, 55%, 52%);
+  color: white;
+  grid-area: box1;
+}
+
+#box-two{
+  background-color: hsl(217, 19%, 35%);
+  color: white;
+  grid-area: box2;
+}
+
+#box-three{
+  background-color: var(--white);
+  grid-area: box3;
+}
+
+#box-four{
+  background-color: var(--white);
+  grid-area: box4;
+}
+
+#box-five{
+  background-color: hsl(219, 29%, 14%);
+  color: white;
+  grid-area: box5;
+}
